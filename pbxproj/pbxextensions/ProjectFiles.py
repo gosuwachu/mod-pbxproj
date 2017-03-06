@@ -108,7 +108,7 @@ class ProjectFiles:
         if not force:
             for section in self.objects.get_sections():
                 for obj in self.objects.get_objects_in_section(section):
-                    if u'path' in obj and ProjectFiles._path_leaf(path) == ProjectFiles._path_leaf(obj.path):
+                    if u'path' in obj and path == obj.path:
                         return results
 
         # decide the proper tree and path to add
