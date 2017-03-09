@@ -130,7 +130,7 @@ class ProjectFiles:
         self._get_parent_group(parent).add_child(file_ref)
 
         # no need to create the build_files, done
-        if not file_options.create_build_files:
+        if not file_options.create_build_files or not expected_build_phase:
             return results
 
         # additional attributes in for libraries/embed frameworks
